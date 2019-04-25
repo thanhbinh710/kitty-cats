@@ -13,4 +13,8 @@ export class CatService {
   getCats(): Observable<Cat[]> {
     return this.http.get<Cat[]>('http://www.mocky.io/v2/5cc05e5a3100009f0a0362db');
   }
+
+  getCat(id: string): Observable<Cat> {
+    return this.http.get<Cat>(`http://www.mocky.io/v2/${id}`);
+  }
 }

@@ -9,18 +9,22 @@
     </ul>
   </div>
 </nav>
- 
+
 <div class="container main-content">
   <div class="row justify-content-center">
+    <div class="col-10 col-md-5">
+      <img [src]="cat?.dp" width="300" [alt]="cat?.name">
+    </div>
+
     <div class="col-10 col-md-7">
-      <h4 class="page-title"> Welcome to {{ title }}! </h4>
-      <hr/>
+      <h4>{{ cat?.name }}</h4>
+      <em>{{ cat?.dob}} </em>
+      <h6>{{ cat?.adopted ? 'Adopted' : 'Not adopted'}}</h6>
+      <p class="cat-details" [innerHTML]="cat?.description"></p>
+
+      <a routerLink="/cats">Back</a>
     </div>
   </div>
 
-  <div class="row justify-content-center">
-    <div class="col-10 col-md-6 col-xl-3" *ngFor="let cat of catList">
-      <app-card [cat]="cat"></app-card>
-    </div>
-  </div>
 </div>
+  

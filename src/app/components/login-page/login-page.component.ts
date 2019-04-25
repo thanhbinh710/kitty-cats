@@ -21,7 +21,7 @@ export class LoginPageComponent implements OnInit {
     console.log('password', this.password);
     if (this.username && this.password && this.username.toLowerCase() === 'username' && this.password.toLowerCase() === 'password') {
       this.message = 'You have entered the correct username and password';
-      this.router.navigate(['/home']);
+      this.router.navigate(['/cats']);
     } else {
       this.message = 'You have entered a wrong username and password';
     }

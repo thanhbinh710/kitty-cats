@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { CardComponent } from './components/shared-components/card/card.component';
+import { CatDetailsComponent } from './components/cat-details/cat-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     LoginPageComponent,
-    CardComponent
+    CardComponent,
+    CatDetailsComponent
   ],
   imports: [
     BrowserModule,

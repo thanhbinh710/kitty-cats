@@ -9,6 +9,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { CardComponent } from './components/shared-components/card/card.component';
 import { CatDetailsComponent } from './components/cat-details/cat-details.component';
+import { CatListComponent } from './components/cat-list/cat-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CatDetailsComponent } from './components/cat-details/cat-details.compon
     HomePageComponent,
     LoginPageComponent,
     CardComponent,
-    CatDetailsComponent
+    CatDetailsComponent,
+    CatListComponent
   ],
   imports: [
     BrowserModule,

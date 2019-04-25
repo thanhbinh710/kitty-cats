@@ -13,3 +13,12 @@
     font-weight: lighter;
     cursor: pointer;
 }
+
+.page-title {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.card {
+    margin-bottom: 1rem;
+}

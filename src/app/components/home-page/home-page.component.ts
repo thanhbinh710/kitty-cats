@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { data } from './catdata';
+import { Cat } from '../../models/cat';
 
 @Component({
   selector: 'app-home-page',
@@ -7,16 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
   title = 'Kitty App';
-  imageUrl = 'https://placekitten.com/300/350';
-  isHidden: boolean;
+  catList: Cat[];
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  toggle() {
-    this.isHidden = !this.isHidden;
+    this.catList = data;
   }
 
 }

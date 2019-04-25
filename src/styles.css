@@ -23,3 +23,9 @@ body {
     font-size: var(--font-size);
     color: var(--black-text);
 }
+
+.main-content {
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+ 

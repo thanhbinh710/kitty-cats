@@ -13,23 +13,22 @@
 <div class="container main-content">
   <div class="row justify-content-center">
     <div class="col-10 col-md-7">
-      <!-- String interpolation -->
-      <h4>
-        Welcome to {{ title }}!
-      </h4>
-
-      <!-- Property Binding -->
-      <img *ngIf="isHidden" width="300" alt="kitty" [src]="imageUrl">
-
+      <h4 class="page-title"> Welcome to {{ title }}! </h4>
       <hr/>
+    </div>
+  </div>
 
-      <!-- Event Binding -->
-      <div>
-        <button class="btn btn-primary" (click)="toggle()">Toggle me</button>
-        <p>Value of isHidden is {{ isHidden }} </p>
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-6 col-xl-3" *ngFor="let cat of catList">
+      <div class="card">
+        <img [src]="cat?.dp" class="card-img-top" [alt]="cat?.name " width="300">
+        <div class="card-body">
+          <a routerLink="/cat/{{cat?.id}}" >
+            <h5 class="card-title">{{ cat?.name }}</h5>
+          </a>
+          <p class="card-text">{{ cat?.dob }}</p>
+        </div>
       </div>
-      
-      <hr/>
     </div>
   </div>
 </div>

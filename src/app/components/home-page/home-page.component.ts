@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { data } from './catdata';
 import { Cat } from '../../models/cat';
+import { CatService } from '../../services/cat.service';
 
 @Component({
   selector: 'app-home-page',
@@ -11,10 +11,17 @@ export class HomePageComponent implements OnInit {
   title = 'Kitty App';
   catList: Cat[];
 
-  constructor() { }
+  constructor(private catService: CatService) { }
 
   ngOnInit() {
-    this.catList = data;
+    this.catService.getCats().subscribe(
+      (res: any) => {
+        this.catList = res.data;
+      },
+      err => {
+        console.error(err);
+      }
+    );
   }
 
 }

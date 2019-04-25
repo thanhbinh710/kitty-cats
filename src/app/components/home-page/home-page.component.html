@@ -20,15 +20,7 @@
 
   <div class="row justify-content-center">
     <div class="col-10 col-md-6 col-xl-3" *ngFor="let cat of catList">
-      <div class="card">
-        <img [src]="cat?.dp" class="card-img-top" [alt]="cat?.name " width="300">
-        <div class="card-body">
-          <a routerLink="/cat/{{cat?.id}}" >
-            <h5 class="card-title">{{ cat?.name }}</h5>
-          </a>
-          <p class="card-text">{{ cat?.dob }}</p>
-        </div>
-      </div>
+      <app-card [cat]="cat"></app-card>
     </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-7">
+      <!-- String interpolation -->
+      <h4>
+        Welcome to {{ title }}!
+      </h4>
+
+      <!-- Property Binding -->
+      <img *ngIf="isHidden" width="300" alt="kitty" [src]="imageUrl">
+
+      <hr/>
+
+      <!-- Event Binding -->
+      <div>
+        <button class="btn btn-primary" (click)="toggle()">Toggle me</button>
+        <p>Value of isHidden is {{ isHidden }} </p>
+      </div>
+      
+      <hr/>
+    </div>
+  </div>
+</div>

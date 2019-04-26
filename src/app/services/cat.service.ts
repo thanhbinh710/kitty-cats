@@ -11,10 +11,10 @@ export class CatService {
   constructor(private http: HttpClient) { }
 
   getCats(): Observable<Cat[]> {
-    return this.http.get<Cat[]>('http://www.mocky.io/v2/5cc05e5a3100009f0a0362db');
+    return this.http.get<Cat[]>('https://www.mocky.io/v2/5cc05e5a3100009f0a0362db');
   }
 
   getCat(id: string): Observable<Cat> {
-    return this.http.get<Cat>(`http://www.mocky.io/v2/${id}`);
+    return this.http.get<Cat>(`https://www.mocky.io/v2/${id}`);
   }
 }
